@@ -19,8 +19,8 @@ spec:
       {{ end }}
       containers:
       - name: web
-        image: {{ .Values.image.repo }}/rs-web:{{ .Values.image.version }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: pvdbleek/rs-web:latest
+        imagePullPolicy: Always
         {{- if .Values.eum.key }}
         env:
         - name: INSTANA_EUM_KEY
